@@ -284,6 +284,8 @@ __pycache__/
 /packages/
 /scripts/buildsystems/tmp/
 /toolsrc/build.rel/
+/toolsrc/msbuild.rel.x86/
+/toolsrc/msbuild.rel.x64/
 #ignore custom triplets
 /triplets/*
 #add vcpkg-designed triplets back in
