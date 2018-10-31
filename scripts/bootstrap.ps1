@@ -328,7 +328,7 @@ if ($disableMetrics)
 }
 
 $platform = "x86"
-$vcpkgReleaseDir = "$vcpkgSourcesPath\msbuild.rel.x86"
+$vcpkgReleaseDir = "$vcpkgSourcesPath\msbuild.x86.release"
 
 if ($win64)
 {
@@ -339,12 +339,11 @@ if ($win64)
     }
 
     $platform = "x64"
-    $vcpkgReleaseDir = "$vcpkgSourcesPath\msbuild.rel.x64"
+    $vcpkgReleaseDir = "$vcpkgSourcesPath\msbuild.x64.release"
 }
 
 $arguments = (
 "/p:OutDir=`"$vcpkgReleaseDir\\\\`"",
-#"/p:IntDir=`"$vcpkgReleaseDir\intermediate\\\\`"", # Causes warnings
 "`"/p:VCPKG_VERSION=-nohash`"",
 "`"/p:DISABLE_METRICS=$disableMetricsValue`"",
 "/p:Configuration=Release",
